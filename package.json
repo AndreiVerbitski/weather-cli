@@ -1,5 +1,6 @@
 {
   "name": "weather-cli",
+<<<<<<< HEAD
   "private": "true",
   "version": "1.0.0",
   "description": "CLI for getting weather",
@@ -8,6 +9,13 @@
   "engines": {
     "node": ">14"
   },
+=======
+  "version": "1.0.0",
+  "private": false,
+  "description": "CLI for getting weather",
+  "main": "index.js",
+  "bin": "./index.js",
+>>>>>>> d7b808056d0515557f4e7c073e0ec39bd58ebf99
   "scripts": {
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +24,7 @@
     "cli",
     "weather"
   ],
+<<<<<<< HEAD
   "author": "Andrey Verbitskiy",
   "license": "ISC",
   "homepage": "https://vk.com/idandreyk1232",
@@ -28,3 +37,9 @@
     "email": "andrew162555@gmail.com"
   }
 }
+=======
+  "author": "Andrey Verbitskii",
+  "license": "ISC"
+}
+
+>>>>>>> d7b808056d0515557f4e7c073e0ec39bd58ebf99
