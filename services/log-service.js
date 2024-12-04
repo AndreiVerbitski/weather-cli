@@ -7,11 +7,11 @@ function printError(error) {
 }
 
 function printSuccess(message) {
-    console.log(chalk.bgGreen('Success') + ': ' + message)
+    console.log(chalk.bgGreen('SUCCESS') + ': ' + message)
 }
 
 function printHelp() {
-    console.log(dedent(`${chalk.bgYellow('Help:')}
+    console.log(dedent(`${chalk.bgYellow('HELP:')}
         Без параметров: вывод погоды
         -s [CITY] для установки города
         -h для вывода помощи
@@ -19,4 +19,13 @@ function printHelp() {
         `))
 }
 
-export {printError, printHelp, printSuccess}
+function printWeather(weather, icon) {
+    console.log(dedent(`${chalk.bgMagentaBright('WEATHER')}
+        В городе ${weather.name} сегодня ${icon} ${weather.weather[0].description}
+        Температура: ${weather.main.temp} чувствуется как ${weather.main.feels_like}
+        Влажность: ${weather.main.humidity}
+        Скорость ветра: ${weather.wind.speed} метра в секунду
+        `))
+}
+
+export {printError, printHelp, printSuccess, printWeather}
