@@ -2,7 +2,7 @@ import axios from "axios";
 import {FILE_DICTIONARY, getKeyValue} from "./storage-service.js";
 
 async function getWeather(city) {
-    const token = await getKeyValue(FILE_DICTIONARY.token)
+    const token = process.env.TOKEN ?? await getKeyValue(FILE_DICTIONARY.token)
     if (!token) {
         throw new Error('token not found, add it through command -t [API_KEY]')
     }
@@ -16,6 +16,7 @@ async function getWeather(city) {
         }
     })
     console.log(data)
+    return data
 }
 
 export { getWeather }
